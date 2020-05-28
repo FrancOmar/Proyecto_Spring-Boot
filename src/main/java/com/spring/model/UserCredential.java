@@ -1,8 +1,9 @@
 package com.spring.model;
 
-
 public class UserCredential {
+	
 	private String username;
+	
 	private String password;
 	
 	public UserCredential() {}

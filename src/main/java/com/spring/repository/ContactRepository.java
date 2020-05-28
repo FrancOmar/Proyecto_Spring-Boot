@@ -9,4 +9,6 @@ import com.spring.entity.Contact;
 
 @Repository("contactRepository")
 public interface ContactRepository extends JpaRepository<Contact, Serializable>{
+	
+	
 }

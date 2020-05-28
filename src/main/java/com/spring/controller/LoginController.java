@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.constant.ViewConstant;
 import com.spring.model.UserCredential;
 
 @Controller
 public class LoginController {
+	
 	
 	@GetMapping("/")
 	public String redirectToLogin() {
@@ -25,13 +27,13 @@ public class LoginController {
 		model.addAttribute("error", error);
 		model.addAttribute("logout", logout);
 		model.addAttribute("userCredentials", new UserCredential());
-		return "login";
+		return ViewConstant.LOGIN;
 	}
 	
 	@PostMapping("/logincheck")
 	public String loginCheck(@ModelAttribute(name="userCredentials") UserCredential userCredential) {
 		if(userCredential.getUsername().equals("user") && userCredential.getPassword().equals("user")) {
-			return "contacts";
+			return ViewConstant.CONTACTS;
 		}
 		return "redirect:/login?error";	
 	}
