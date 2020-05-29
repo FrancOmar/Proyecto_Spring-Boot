@@ -1,7 +1,5 @@
 package com.spring.model;
 
-import javax.persistence.Column;
-
 public class ContactModel {
 
 	private int id;

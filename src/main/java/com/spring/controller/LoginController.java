@@ -33,7 +33,7 @@ public class LoginController {
 	@PostMapping("/logincheck")
 	public String loginCheck(@ModelAttribute(name="userCredentials") UserCredential userCredential) {
 		if(userCredential.getUsername().equals("user") && userCredential.getPassword().equals("user")) {
-			return ViewConstant.CONTACTS;
+			return "redirect:/contacts/showcontacts";
 		}
 		return "redirect:/login?error";	
 	}
