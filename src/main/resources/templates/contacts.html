@@ -16,7 +16,7 @@
 	
 	<div class="container">
 	
-		<h1>Hola, usuario!!!...</h1>
+		<h1>Hola Bienvenido!!!...</h1>
 		<br/>
 		<div class="panel panel-default">
 			<div class="panel-heading"></div>
@@ -60,9 +60,9 @@
 			<button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Añadir contacto</button>
 		</a>
 		
-		<a href="#" th:href="@{/login?logout}">
+		<form th:action="@{/logout}" method="POST">
 			  <button class="btn btn-lg btn-primary btn-block" type="submit"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Salir</button>
-		</a>
+		</form>
 		
 	</div>
 </body>

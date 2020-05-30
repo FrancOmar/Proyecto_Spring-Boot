@@ -9,7 +9,9 @@ import com.spring.model.ContactModel;
 public class ContactConverter {
 	
 	public Contact convertContactModel2Contact(ContactModel contactModel) {
+		
 		Contact contact = new Contact();
+		
 		contact.setId(contactModel.getId());
 		contact.setFirstname(contactModel.getFirstname());
 		contact.setLastname(contactModel.getLastname());
